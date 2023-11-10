@@ -114,6 +114,7 @@ body {
     max-width: 1301px;
     padding: 0 5px;
     margin: 0 auto;
+    overflow: hidden;
 }
 
 .nav {
@@ -258,7 +259,7 @@ body {
 }
 
 .header-bottom__elements {
-    width: 250px;
+    max-width: 250px;
 
 }
 
@@ -327,19 +328,17 @@ body {
     letter-spacing: 0.05em;
     text-transform: uppercase;
     text-align: left;
-
 }
 
 
 .progress__title.element-animation {
-    transform: translateX(-90%);
+
     opacity: 0;
     transition: 2s;
 }
 
 .progress__title.element-animation.element-show {
     opacity: 1;
-    transform: translateX(0%);
 }
 
 
@@ -355,14 +354,12 @@ body {
 
 .progress__center.element-animation,
 .progress__right.element-animation {
-    transform: translateX(90%);
     opacity: 0;
     transition: 1.5s;
 }
 
 .progress__descriptions.element-animation,
 .progress__left div.hr-line.element-animation {
-    transform: translateX(-90%);
     opacity: 0;
     transition: 1.5s;
 }
@@ -370,25 +367,21 @@ body {
 
 .progress__descriptions.element-animation.element-show {
     opacity: 1;
-    transform: translateX(0%);
     transition-delay: 0.35s;
 }
 
 
 .progress__left div.hr-line.element-animation.element-show {
     opacity: 1;
-    transform: translateX(0%);
 }
 
 
 .progress__center.element-animation.element-show {
     opacity: 1;
-    transform: translateX(0%);
 }
 
 .progress__right.element-animation.element-show {
     opacity: 1;
-    transform: translateX(0%);
     transition-delay: 0.35s;
 }
 
@@ -996,9 +989,13 @@ footer {
     }
 }
 
-@media screen and (max-width: 1100px) {
+@media (max-width: 1100px) {
     #slides div.slide:nth-child(2) {
         display: none;
+    }
+
+    .progress__title {
+        font-size: 35px;
     }
 
     .btn-left {
