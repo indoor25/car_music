@@ -330,6 +330,19 @@ body {
 
 }
 
+
+.progress__title.element-animation {
+    transform: translateX(-90%);
+    opacity: 0;
+    transition: 2s;
+}
+
+.progress__title.element-animation.element-show {
+    opacity: 1;
+    transform: translateX(0%);
+}
+
+
 .progress__descriptions {
     width: 530px;
     margin-top: 60px;
@@ -338,6 +351,45 @@ body {
     line-height: 29px;
     letter-spacing: 0.03em;
     text-align: left;
+}
+
+.progress__center.element-animation,
+.progress__right.element-animation {
+    transform: translateX(90%);
+    opacity: 0;
+    transition: 1.5s;
+}
+
+.progress__descriptions.element-animation,
+.progress__left div.hr-line.element-animation {
+    transform: translateX(-90%);
+    opacity: 0;
+    transition: 1.5s;
+}
+
+
+.progress__descriptions.element-animation.element-show {
+    opacity: 1;
+    transform: translateX(0%);
+    transition-delay: 0.35s;
+}
+
+
+.progress__left div.hr-line.element-animation.element-show {
+    opacity: 1;
+    transform: translateX(0%);
+}
+
+
+.progress__center.element-animation.element-show {
+    opacity: 1;
+    transform: translateX(0%);
+}
+
+.progress__right.element-animation.element-show {
+    opacity: 1;
+    transform: translateX(0%);
+    transition-delay: 0.35s;
 }
 
 .progress__center {
@@ -388,8 +440,12 @@ body {
 
 /*SLIDER*/
 .slider {
-    position: relative;
+
     margin-bottom: 180px;
+}
+
+.slider div.wrapper {
+    position: relative;
 }
 
 .slider-btns {
@@ -645,8 +701,37 @@ body {
     justify-items: center;
     align-items: center;
     border: 1px solid #898989;
+    transform: rotateY(90deg);
+    transition: all 1.5s;
 }
 
+.services__layout.element-animation {
+    opacity: 0;
+}
+
+.services__layout.element-animation.element-show {
+    opacity: 1;
+}
+
+.services__layout.element-animation.element-show:nth-child(1) {
+    transition-delay: 0s;
+    transform: rotateY(0deg);
+}
+
+.services__layout.element-animation.element-show:nth-child(2) {
+    transition-delay: 0.20s;
+    transform: rotateY(0deg);
+}
+
+.services__layout.element-animation.element-show:nth-child(3) {
+    transition-delay: 0.4s;
+    transform: rotateY(0deg);
+}
+
+.services__layout.element-animation.element-show:nth-child(4) {
+    transition-delay: 0.6s;
+    transform: rotateY(0deg);
+}
 
 .services__layout-title {
     font-size: 24px;
@@ -894,3 +979,35 @@ footer {
 }
 
 /*END FOOTER*/
+
+/*media*/
+
+@media screen and (max-width: 1460px) {
+    #slides div.slide:nth-child(1) {
+        display: none;
+    }
+
+    .btn-left {
+        left: 200px;
+    }
+
+    .btn-right {
+        right: 200px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    #slides div.slide:nth-child(2) {
+        display: none;
+    }
+
+    .btn-left {
+        left: 440px;
+    }
+
+    .btn-right {
+        right: 440px;
+    }
+}
+
+
