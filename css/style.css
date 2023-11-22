@@ -114,7 +114,6 @@ body {
     max-width: 1301px;
     padding: 0 5px;
     margin: 0 auto;
-    overflow: hidden;
 }
 
 .nav {
@@ -417,6 +416,7 @@ body {
 }
 
 .progress-element__body {
+    padding: 5px;
     font-family: 'Reforma Grotesk Demi';
     font-size: 16px;
     font-weight: 600;
@@ -433,7 +433,8 @@ body {
 
 /*SLIDER*/
 .slider {
-
+    overflow: hidden;
+    min-height: 450px;
     margin-bottom: 180px;
 }
 
@@ -994,8 +995,22 @@ footer {
         display: none;
     }
 
+    .progress__left div.hr-line {
+        justify-content: center;
+    }
+
     .progress__title {
+        text-align: center;
         font-size: 35px;
+    }
+
+    .progress-element {
+        width: 180px;
+    }
+
+    .progress__descriptions {
+        padding: 5px;
+        width: 370px;
     }
 
     .btn-left {
